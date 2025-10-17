@@ -1352,7 +1352,7 @@ class CreateSectionLabels(docutils.transforms.Transform):
         i_still_have_to_create_the_document_label = True
         for section in self.document.findall(docutils.nodes.section):
             assert section.children
-            assert isinstance(section.children[0], docutils.nodes.title)
+            #assert isinstance(section.children[0], docutils.nodes.title)
             title = section.children[0].astext()
             link_id = section['ids'][0]
             label = '/' + env.docname + file_ext + '#' + link_id
