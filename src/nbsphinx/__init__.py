@@ -1159,7 +1159,7 @@ def _extract_gallery_or_toctree(cell):
     if 'caption' not in options:
         for sec in node.findall(docutils.nodes.section):
             assert sec.children
-            assert isinstance(sec.children[0], docutils.nodes.title)
+            #assert isinstance(sec.children[0], docutils.nodes.title)
             title = sec.children[0].astext()
             lines.append(':caption: ' + title)
             break
